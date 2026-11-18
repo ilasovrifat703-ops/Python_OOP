@@ -85,6 +85,32 @@ class Animal:
         self.check_weight(new_weight)
         self.__average_weight = new_weight
 
+    def feed(self, food_weight: float) -> float:
+        """
+        Функция, обновляющая вес животного после приема пищи.
+
+        Args:
+            food_weight: масса корма.
+
+        Returns:
+            None
+        """
+        self.check_weight(food_weight)
+        self.__average_weight += food_weight
+
+    def find_daily_food_weight(self) -> float:
+        """
+        Функция, рассчитывающая дневную норму еды (5% от массы животного).
+
+
+        Returns:
+            float: масса корма.
+        """
+        food_weight = (self.__average_weight) * 0.05
+
+        return food_weight
+
+
     def __str__(self):
         return(f'Наименования животного: {self.__name}\n')
 
@@ -104,4 +130,7 @@ class Animal:
 
 
 p = Animal('ss','sss',10)
+
+print(p.feed(1))
+print(p.__dict__)
 
