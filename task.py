@@ -47,7 +47,7 @@ class Animal:
         Геттер наименования животного.
 
         Returns:
-            None
+            str: наименование животного.
         """
         return self.__class_name
 
@@ -63,7 +63,7 @@ class Animal:
         """
         self.__class_name = new_class
 
-    def get_weight(self) -> str:
+    def get_weight(self) -> float:
         """
         Геттер среднего веса животного.
 
@@ -82,13 +82,14 @@ class Animal:
         Returns:
             None
         """
+        self.check_weight(new_weight)
         self.__average_weight = new_weight
 
     def __str__(self):
         return(f'Наименования животного: {self.__name}\n')
 
     @staticmethod
-    def check_weight(weight: int) -> None:
+    def check_weight(weight: float) -> None:
         """
         Функция проверки значения веса.
 
@@ -102,6 +103,5 @@ class Animal:
             raise ValueError('Вес должен быть больше 0')
 
 
-p = Animal('ss','sss',9)
-p.set_name('yuo')
-print(p.__dict__)
+p = Animal('ss','sss',10)
+
