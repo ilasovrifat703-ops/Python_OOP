@@ -72,7 +72,7 @@ class Animal:
         """
         return self.__average_weight
 
-    def set_weight(self, new_weight: str) -> None:
+    def set_weight(self, new_weight: float) -> None:
         """
         Сеттер нового среднего веса животного.
 
@@ -112,7 +112,9 @@ class Animal:
 
 
     def __str__(self):
-        return(f'Наименования животного: {self.__name}\n')
+        return(f'Наименования животного: {self.__name}\n'
+               f'Вес животного: {self.__average_weight}\n'
+               f'Класс животного: {self.__class_name}')
 
     @staticmethod
     def check_weight(weight: float) -> None:
@@ -131,6 +133,5 @@ class Animal:
 
 p = Animal('ss','sss',10)
 
-print(p.feed(1))
-print(p.__dict__)
+print(p)
 
