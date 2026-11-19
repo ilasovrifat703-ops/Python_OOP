@@ -26,42 +26,47 @@ class Menu:
 
     def run(self) -> None:
         """Запускает основной цикл работы меню."""
-        while True:
+        choise = ""
+        while choise != '0':
             self.show_commands()
             choice = input("Выберите номер действия: ")
 
-            if choice == "1":
-                print("Информация о животном")
-                print(self.__animal)
+            match choice:
+                case "1":
+                    print("Информация о животном:")
+                    print(self.__animal)
+                    
+                case "2":
+                    new_name = input("Введите новое наименование: ")
+                    self.__animal.set_name(new_name)
+                    print("Наименование успешно изменено.")
 
-            elif choice == "2":
-                new_name = input("Введите новое наименование: ")
-                self.__animal.set_name(new_name)
-                print("Наименование успешно изменено.")
-
-            elif choice == "3":
-                new_class = input("Введите новый класс животного: ")
-                if new_class:
+                case "3":
+                    new_class = input("Введите новый класс животного: ").strip()
                     self.__animal.set_class(new_class)
                     print("Класс успешно изменен.")
 
-            elif choice == "4":
-                new_weight = float(input("Введите новый средний вес (кг): "))
-                self.__animal.set_weight(new_weight)
-                print("Средний вес успешно обновлен.")
+                case "4":
+                    new_weight = float(input("Введите новый средний вес (кг): "))
+                    self.__animal.set_weight(new_weight)
+                    print("Средний вес успешно обновлен.")
 
-            elif choice == "5":
-                food = float(input("Введите массу корма (кг): "))
-                self.__animal.feed(food)
-                print(f"Текущий вес: {self.__animal.get_weight()} кг.")
+                case "5":
+                    food = float(input("Введите массу корма (кг): "))
+                    self.__animal.feed(food)
+                    print(f"Текущий вес: {self.__animal.get_weight()} кг.")
 
-            elif choice == "6":
-                daily_food = self.__animal.find_daily_food_weight()
-                print(f"Дневная норма корма для '{self.__animal.get_name()}': {daily_food} кг.")
+                case "6":
+                    daily_food = self.__animal.find_daily_food_weight()
+                    print(f"Дневная норма корма для '{self.__animal.get_name()}': {daily_food:.2f} кг.")
 
-            elif choice == "0":
-                print("Работа программы завершена.")
-                break
+                case "0":
+                    print("Работа программы завершена.")
+                    break
+
+                case _:
+                    print("Неверный номер действия. Пожалуйста, выберите пункт от 0 до 6.")
+
 
 
 
