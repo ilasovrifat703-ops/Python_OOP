@@ -12,6 +12,7 @@ class Menu:
         """
         self.__animal = animal
 
+
     @staticmethod
     def show_commands() -> None:
         """Выводит список доступных пунктов меню на экран."""
@@ -24,6 +25,7 @@ class Menu:
               f"5. Покормить животное\n"
               f"6. Рассчитать дневную норму корма\n"
               f"0. Выход из программы")
+
        
     def run(self) -> None:
         """Запускает основной цикл работы меню."""
@@ -34,7 +36,7 @@ class Menu:
             choice = input("Выберите номер действия: ")
 
             match choice:
-                
+
                 case "1":
                     print("Информация о животном:")
                     print(self.__animal)
