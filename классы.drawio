@@ -1,0 +1,37 @@
+<mxfile host="Electron">
+  <diagram name="Страница-1" id="tbYJmWVwOr0QGfZ1fZ9L">
+    <mxGraphModel dx="1047" dy="1907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-9" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="440" width="210" x="190" y="-660" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-2" parent="YbbfwOSGlJH5mlUuiPzT-9" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="240" width="160" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-3" parent="YbbfwOSGlJH5mlUuiPzT-9" style="rounded=0;whiteSpace=wrap;html=1;" value="Animal" vertex="1">
+          <mxGeometry height="40" width="210" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-5" parent="YbbfwOSGlJH5mlUuiPzT-9" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;__name: str&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;__average_weight: float&lt;/div&gt;&lt;div style=&quot;&quot;&gt;__class_name: float&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="210" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-7" parent="YbbfwOSGlJH5mlUuiPzT-9" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;line-height: 160%;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&amp;nbsp; get_name(): str&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; set_name(new_name: str): str&lt;/div&gt;&lt;div&gt;&amp;nbsp; get_class(): str&lt;/div&gt;&lt;div&gt;&amp;nbsp; set_class(new_class: str): str&lt;/div&gt;&lt;div&gt;&amp;nbsp; get_weight(): foat&lt;/div&gt;&lt;div&gt;&amp;nbsp; set_weight(new_weight: float): float&lt;/div&gt;&lt;div&gt;&amp;nbsp; feed(food_weight: float): None&lt;/div&gt;&lt;div&gt;&amp;nbsp; find_daily_food_weight(): float&lt;/div&gt;&lt;div&gt;&amp;nbsp; __str__(): str&lt;/div&gt;&lt;div&gt;&amp;nbsp; check_weight(weight: float): None&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="210" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="160" width="210" x="190" y="-920" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Menu" vertex="1">
+          <mxGeometry height="40" width="210" x="190" y="-920" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;&quot;&gt;__animal: Animal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="190" y="-880" as="geometry" />
+        </mxCell>
+        <mxCell id="YbbfwOSGlJH5mlUuiPzT-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;&quot;&gt;show_commands(): None&lt;/div&gt;&lt;div style=&quot;&quot;&gt;run(): None&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="190" y="-810" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
