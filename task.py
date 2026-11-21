@@ -15,10 +15,10 @@ class Animal:
             class_name: класс, к которому он относится
             average_weight: средний вес
         """
-        self.check_weight(average_weight)
+
         self.__name = name
         self.__class_name = class_name
-        self.__average_weight = average_weight
+        self.set_weight(average_weight)
 
 
     def get_name(self) -> str:
@@ -76,7 +76,6 @@ class Animal:
         Returns:
             float: средний вес животного.
         """
-
         return self.__average_weight
 
 
@@ -90,8 +89,11 @@ class Animal:
         Returns:
             None
         """
-        self.check_weight(new_weight)
-        self.__average_weight = new_weight
+
+        if new_weight <= 0:
+            raise ValueError('Значение веса должно быть >0')
+        else:
+            self.__average_weight = new_weight
 
 
     def feed(self, food_weight: float) -> float:
@@ -104,7 +106,10 @@ class Animal:
         Returns:
             None
         """
-        self.check_weight(food_weight)
+
+        if food_weight < 0:
+            raise ValueError('Масса корма должна быть > 0')
+
         self.__average_weight += food_weight
 
 
@@ -129,21 +134,6 @@ class Animal:
                f'Класс животного: {self.__class_name}')
 
 
-    @staticmethod
-    def check_weight(weight: float) -> None:
-        """
-        Функция проверки значения веса.
-
-        Args:
-            weight: значение веса, вводимое пользователем
-
-        Returns:
-            None
-        """
-        if weight <= 0:
-            raise ValueError('Введите корректное значение веса(>0)')
-
-
 class Menu:
     """Класс для взаимодействия с пользователем через консольное меню."""
 
@@ -156,12 +146,24 @@ class Menu:
         """
         self.__animal = animal
 
-       
+    def show_commands(self) -> None:
+        """Выводит список доступных пунктов меню на экран."""
+
+        print(f"МЕНЮ УПРАВЛЕНИЯ ЖИВОТНЫМ:\n"
+              f"1. Показать информацию о животном\n"
+              f"2. Изменить наименование животного\n"
+              f"3. Изменить класс животного\n"
+              f"4. Изменить средний вес животного\n"
+              f"5. Покормить животное\n"
+              f"6. Рассчитать дневную норму корма\n"
+              f"0. Выход из программы")
+
+
     def run(self) -> None:
         """Запускает основной цикл работы меню."""
 
-        choise = ""
-        while choise != '0':
+        choice = ""
+        while choice != '0':
             self.show_commands()
             choice = input("Выберите номер действия: ")
 
@@ -201,20 +203,6 @@ class Menu:
 
                 case _:
                     print("Неверный номер действия. Пожалуйста, выберите пункт от 0 до 6.")
-
-
-        @staticmethod
-        def show_commands() -> None:
-            """Выводит список доступных пунктов меню на экран."""
-    
-            print(f"МЕНЮ УПРАВЛЕНИЯ ЖИВОТНЫМ:\n"
-                  f"1. Показать информацию о животном\n"
-                  f"2. Изменить наименование животного\n"
-                  f"3. Изменить класс животного\n"
-                  f"4. Изменить средний вес животного\n"
-                  f"5. Покормить животное\n"
-                  f"6. Рассчитать дневную норму корма\n"
-                  f"0. Выход из программы")
 
 
 animal_obj = Animal("Амурский тигр", "Млекопитающие", 200.0)
