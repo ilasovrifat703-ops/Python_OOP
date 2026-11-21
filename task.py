@@ -20,7 +20,6 @@ class Animal:
         self.__class_name = class_name
         self.__average_weight = average_weight
 
-
     def get_name(self) -> str:
         """
         Геттер наименования животного.
@@ -28,9 +27,10 @@ class Animal:
         Returns:
             str: наименование животного
         """
+
         return self.__name
 
-    def set_name(self,new_name: str) -> None:
+    def set_name(self, new_name: str) -> None:
         """
         Сеттер нового наименования животного.
 
@@ -49,6 +49,7 @@ class Animal:
         Returns:
             str: наименование животного.
         """
+
         return self.__class_name
 
     def set_class(self, new_class: str) -> None:
@@ -70,6 +71,7 @@ class Animal:
         Returns:
             float: средний вес животного.
         """
+
         return self.__average_weight
 
     def set_weight(self, new_weight: float) -> None:
@@ -110,8 +112,9 @@ class Animal:
 
         return food_weight
 
+    def __str__(self) -> str:
+        """Метод, показывающий основую информацию о животном."""
 
-    def __str__(self):
         return(f'Наименования животного: {self.__name}\n'
                f'Вес животного: {self.__average_weight}\n'
                f'Класс животного: {self.__class_name}')
@@ -128,10 +131,6 @@ class Animal:
             None
         """
         if weight <= 0:
-            raise ValueError('Вес должен быть больше 0')
+            raise ValueError('Введите корректное значение веса(>0)')
 
-
-p = Animal('ss','sss',10)
-
-print(p)
 
