@@ -20,6 +20,7 @@ class Animal:
         self.__class_name = class_name
         self.__average_weight = average_weight
 
+
     def get_name(self) -> str:
         """
         Геттер наименования животного.
@@ -29,6 +30,7 @@ class Animal:
         """
 
         return self.__name
+
 
     def set_name(self, new_name: str) -> None:
         """
@@ -42,6 +44,7 @@ class Animal:
         """
         self.__name = new_name
 
+
     def get_class(self) -> str:
         """
         Геттер наименования животного.
@@ -51,6 +54,7 @@ class Animal:
         """
 
         return self.__class_name
+
 
     def set_class(self, new_class: str) -> None:
         """
@@ -64,6 +68,7 @@ class Animal:
         """
         self.__class_name = new_class
 
+
     def get_weight(self) -> float:
         """
         Геттер среднего веса животного.
@@ -73,6 +78,7 @@ class Animal:
         """
 
         return self.__average_weight
+
 
     def set_weight(self, new_weight: float) -> None:
         """
@@ -87,6 +93,7 @@ class Animal:
         self.check_weight(new_weight)
         self.__average_weight = new_weight
 
+
     def feed(self, food_weight: float) -> float:
         """
         Функция, обновляющая вес животного после приема пищи.
@@ -100,6 +107,7 @@ class Animal:
         self.check_weight(food_weight)
         self.__average_weight += food_weight
 
+
     def find_daily_food_weight(self) -> float:
         """
         Функция, рассчитывающая дневную норму еды (5% от массы животного).
@@ -112,12 +120,14 @@ class Animal:
 
         return food_weight
 
+
     def __str__(self) -> str:
         """Метод, показывающий основую информацию о животном."""
 
         return(f'Наименования животного: {self.__name}\n'
                f'Вес животного: {self.__average_weight}\n'
                f'Класс животного: {self.__class_name}')
+
 
     @staticmethod
     def check_weight(weight: float) -> None:
